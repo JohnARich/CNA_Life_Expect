@@ -24,7 +24,7 @@ TK
 plot(TK)
 
 frscored_cna(LE, type = "cs", fit.range = c(1, 0.75), granularity = 0.05, details = c("ex","fa", "PAcon", "PACcov"),
-             normalize = "truemax", outcome = "LOW_LIFE_EXPECTANCY", strict = TRUE, print.all = TRUE)
+             normalize = "truemax", outcome = "LOW_LIFE_EXPECTANCY", strict = TRUE, print.all = FALSE)
 
 #CAUSAL CHAIN
 
@@ -38,5 +38,5 @@ plot(TK)
 #RETURNS: (HIGH_RESIDENTIAL_SEGREGATION<->HIGH_LOW_BIRTH_WEIGHT)*(HIGH_LOW_BIRTH_WEIGHT*HIGH_UNEMPLOYMENT+HIGH_LOW_BIRTH_WEIGHT*HIGH_SHOOTINGS+HIGH_UNEMPLOYMENT*HIGH_SHOOTINGS<->LOW_LIFE_EXPECTANCY)
 
 frscored_cna(LE, type = "cs", fit.range = c(1.0, 0.75), granularity = 0.01, details = c("ex","fa", "PAcon", "PACcov"), 
-             normalize = "truemax", ordering = "HIGH_RESIDENTIAL_SEGREGATION < HIGH_SHOOTINGS, HIGH_LOW_BIRTH_WEIGHT, HIGH_UNEMPLOYMENT < LOW_LIFE_EXPECTANCY", strict = FALSE, print.all = TRUE)
+             normalize = "truemax", ordering = "HIGH_RESIDENTIAL_SEGREGATION < HIGH_SHOOTINGS, HIGH_LOW_BIRTH_WEIGHT, HIGH_UNEMPLOYMENT < LOW_LIFE_EXPECTANCY", strict = FALSE, print.all = FALSE)
 
